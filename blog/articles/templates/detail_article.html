@@ -12,5 +12,11 @@
             <li>{{ comment.author }}: {{ comment.content }}</li>
         {% endfor %}
     </ul>
+    <h2>Ajouter un commentaire</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Envoyer</button>
+    </form>
 </body>
 </html>
