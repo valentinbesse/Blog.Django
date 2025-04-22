@@ -5,11 +5,12 @@
 </head>
 <body>
     <h1>{{ article.title }}</h1>
+    <p>{{ article.publication_date}}</p>
     <p>{{ article.content }}</p>
     <h2>Commentaires</h2>
     <ul>
         {% for comment in article.comments.all %}
-            <li>{{ comment.author }}: {{ comment.content }}</li>
+            <li>{{comment.published_date}} - {{ comment.author }}: {{ comment.content }}</li>
         {% endfor %}
     </ul>
     <h2>Ajouter un commentaire</h2>

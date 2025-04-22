@@ -5,7 +5,7 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     publication_date = models.DateField()
-    last_updated = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
 
     def __str__(self):
@@ -22,7 +22,7 @@ class Comment(models.Model):
     author = models.CharField(max_length=100)
     content = models.TextField()
     published_date = models.DateField()
-    last_updated = models.DateTimeField(auto_now=True)
+    last_updated = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'Comment by {self.author} on {self.published_date}'
