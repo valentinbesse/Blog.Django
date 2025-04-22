@@ -21,3 +21,9 @@ Ce projet est un blog personnel développé avec Django. Il permet de publier de
    ```bash
    git clone https://github.com/votre_utilisateur/blog-personnel.git
    cd blog-personnel
+   ```
+
+2. **Creer l'environnement virtuel**
+   ```bash
+   virtualenv blog_env
+   ```
